@@ -20,14 +20,14 @@ def zaiko():
   no_zaiko = '[<span class="htmlSelect-colorVariation-element-stock stock-label d-inlineblock align-middle" data-v-03f71054="">在庫なし</span>, <span class="htmlSelect-colorVariation-element-stock stock-label d-inlineblock align-middle" data-v-03f71054="">在庫なし</span>, <span class="htmlSelect-colorVariation-element-stock stock-label d-inlineblock align-middle" data-v-03f71054="">在庫なし</span>, <span class="htmlSelect-colorVariation-element-stock stock-label d-inlineblock align-middle" data-v-03f71054="">在庫なし</span>, <span class="htmlSelect-colorVariation-element-stock stock-label d-inlineblock align-middle" data-v-03f71054="">在庫なし</span>, <span class="htmlSelect-colorVariation-element-stock stock-label d-inlineblock align-middle" data-v-03f71054="">在庫なし</span>]'
   if no_zaiko == latest_zaiko:
     print("在庫無し！ぴえん")
-    file = open("info.json", "r")
+    file = open("zaiko.json", "r")
     info = json.load(file)
     CHANNEL_ACCESS_TOKEN = info['CHANNEL_ACCESS_TOKEN']
     line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
     USER_ID = info['USER_ID']
-    messages = TextSendMessage(text="在庫あり！")
+    messages = TextSendMessage(text="入荷したよ😊")
     line_bot_api.push_message(USER_ID, messages=messages)
   else:
     print("在庫有り！すぐに買うのだ！")
-    
-    
+
+zaiko()
