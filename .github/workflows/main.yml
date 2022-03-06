@@ -34,7 +34,7 @@ jobs:
           pip install line-bot-sdk
           pip install beautifulsoup4
           pip install requests
-          pip install chromedriver-binary==98.0.4758.109
+          pip install chromedriver-binary==98.0.4758.102.0
           pip install selenium
           
       - name: Run script
